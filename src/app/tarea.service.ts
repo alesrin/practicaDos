@@ -44,6 +44,18 @@ constructor() {
     this.guardarTareas();
   }    
   }
-  actualizarTareaas (tarea)
+  actualizarTarea(tareaActualizada: Tarea) {
+    const index = this.tareas.findIndex
+      (tarea => tarea.id === tareaActualizada.id);
+    if (index !== -1)
+      this.tareas[index] = tareaActualizada;
+    this.guardarTareas();
+  }
+}
+getTareaParaEditar(): ObservableData null > {
+  return this.tareaParaEditar.asOserbable();
+}
+setTareaParaEditar(tarea: Data | null){
+  this.tareaParaEditar.next(tarea)
   }
 }
