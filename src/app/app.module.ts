@@ -16,8 +16,7 @@ import { TaskFormComponent } from './tareas/task-form/task-form.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    TareasModule,
+    AppRoutingModule,    
     FormsModule
   ],
   providers: [],
