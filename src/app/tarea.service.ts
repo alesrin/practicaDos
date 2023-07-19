@@ -51,11 +51,19 @@ constructor() {
       this.tareas[index] = tareaActualizada;
     this.guardarTareas();
   }
-}
-getTareaParaEditar(): ObservableData null > {
-  return this.tareaParaEditar.asOserbable();
-}
-setTareaParaEditar(tarea: Data | null){
+
+getTareaParaEditar(): Observable<Tarea | null> {
+return this.tareaParaEditar.asObservable();}
+setTareaParaEditar(tarea: Tarea | null){
   this.tareaParaEditar.next(tarea)
+}
+limpiarTarea(){
+  this.tareaParaEditar.next(null);
+}
+  private generarNuevoId(): number {
+  const ids = this.tareas.map(tarea => tarea.id);
+  const maxId = Math.max(...ids);
+  return maxId + 1;
   }
 }
+
