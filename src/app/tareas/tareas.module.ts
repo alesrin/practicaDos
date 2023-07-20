@@ -5,6 +5,7 @@ import { TaskFormComponent } from './task-form/task-form.component';
 import { TaskDetailComponent } from './task-detail/task-detail.component';
 import { FormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     TaskListComponent,
