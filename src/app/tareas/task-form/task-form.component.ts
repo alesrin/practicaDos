@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { NgFor } from '@angular/common';
+import { NgForm } from '@angular/forms';
 import { TareaService } from 'src/app/tarea.service';
 import { Tarea } from 'src/app/tarea.model';
-import { state } from '@angular/animations';
-import { identifierName } from '@angular/compiler';
 @Component({
   selector: 'app-task-form',
   templateUrl: './task-form.component.html',
@@ -42,14 +40,14 @@ export class TaskFormComponent implements OnInit {
   }
   limpiarFormulario(tareaForm: NgForm) {
     this.nuevaTarea = {
-      id: 0;
+      id: 0,
       name: '',
-      category: '';
-      description: '';
-      dateInit: '';
-      dateEnd: '';
-      state: '';
-      active: true;
+      category: '',
+      description: '',
+      dateInit: '',
+      dateEnd: '',
+      state: '',
+      active: true,
     };
     tareaForm.resetForm();
     this.tareaService.limpiarTarea();
