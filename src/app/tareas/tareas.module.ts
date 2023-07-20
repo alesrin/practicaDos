@@ -4,6 +4,8 @@ import { TaskListComponent } from './task-list/task-list.component';
 import { TaskFormComponent } from './task-form/task-form.component';
 import { TaskDetailComponent } from './task-detail/task-detail.component';
 import { FormsModule } from '@angular/forms';
+import { TareaService } from 'src/app/tarea.service';
+import { Tarea } from 'src/app/tarea.model';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { FormsModule } from '@angular/forms';
     TaskListComponent,
     TaskFormComponent,
     TaskDetailComponent
-  ]
+  ],
+
+  providers: [TareaService]
 })
 export class TareasModule { }

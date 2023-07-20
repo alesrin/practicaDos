@@ -4,7 +4,7 @@ import { TareasModule } from './tareas/tareas.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-
+import { TareaService } from 'src/app/tarea.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +16,7 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     TareasModule
   ],
-  providers: [],
+  providers: [TareaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
