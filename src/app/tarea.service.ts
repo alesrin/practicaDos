@@ -7,7 +7,7 @@ import { Tarea } from './tarea.model';
 })
 export class TareaService {
 
-  private tareas: Tarea[] = [];
+  tareas: Tarea[] = [];
   private tareaParaEditar: BehaviorSubject<Tarea | null> = new BehaviorSubject<Tarea | null>(null); 
 constructor() { 
   this.cargarTareasIniciales();

@@ -1,1 +1,46 @@
-<p>task-form works!</p>
+<!-- PASO 3 Crear un formulario para editar y agregar datos -->
+<div class="container">
+    <h2>Formulario de Tareas</h2>
+    <form #dataForm="ngForm">
+        <div class="row">
+            <div class="col">
+                <input type="hidden" name="id" [(ngModel)]="nuevaTarea.id">
+
+                <div>
+                    <label>Nombre Tarea:</label>
+                    <input type="text" name="name" [(ngModel)]="nuevaTarea.name" required>
+                </div>
+
+                <div>
+                    <label>Categoría:</label>
+                    <input type="text" name="category" [(ngModel)]="nuevaTarea.category" required>
+                </div>
+
+                <div>
+                    <label>Descripción:</label>
+                    <input type="text" name="description" [(ngModel)]="nuevaTarea.description" required>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div>
+                <label>Fecha inicio tarea:</label>
+                <input type="text" name="dateInit" [(ngModel)]="nuevaTarea.dateInit" required>
+            </div>
+            <div>
+                <label>Fecha finalización tarea:</label>
+                <input type="text" name="dateEnd" [(ngModel)]="nuevaTarea.dateEnd" required>
+            </div>
+            <div>
+                <label>Estado de tarea</label>
+                <input type="text" name="state" [(ngModel)]="nuevaTarea.state" required>
+            </div>
+        </div>
+        <div>
+            <button type="button" (click)="agregarOActualizarTarea(dataForm)"
+                [disabled]="!dataForm.form.valid">Guardar</button>
+            <button type="button" (click)="limpiarFormulario(dataForm)">Cancelar</button>
+        </div>
+    </form>
+</div>
+

@@ -1,9 +1,10 @@
 <h2>Lista de Tarea</h2>
 
 <ul>
-    <li *ngFor="let tarea of tareas">
+    <li *ngFor="let tarea of tareas" (click)="seleccionarTarea(tarea)">
         {{ tarea.name }} - {{ tarea.category }} - {{ tarea.description }} {{tarea.dateInit}} {{tarea.dateEnd}} {{tarea.state}} {{tarea.active}}
         <button (click)="eliminarTarea(tarea.id)">Eliminar</button>
         <button (click)="editarTarea(tarea)">Editar</button>
     </li>
 </ul>
+<app-task-detail *ngIf="tareaSeleccionada" [tarea]="tarea"></app-task-detail>
